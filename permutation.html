@@ -4,6 +4,16 @@
 <head>
 	<link rel = "stylesheet" href = "webStyle.css">
 	<title>Permutation Translator</title>
+	
+	<script>
+		function cauchyTranslator() {
+			var cauchyArray = documents.forms["Translate"][cauchyPerm].value
+				.split(',');
+			validateCauchy(cauchyArray);
+		}
+		function validateCauchy(var cauchyArray) {
+		}
+	</script>
 </head>
 
 <body>
@@ -11,12 +21,14 @@
 	<h3>Cauchy to Cyclic</h3>
 	<p>Please enter a sequence of unique natural numbers seperated by commas 
 	representing the second line of a Cauchy Two-Line representation for 
-	some permutation. Press Enter to calculate the cyclic representation of 
+	some permutation. For Example, if you wish to translate the permutation 
+	that maps 1 to 2, 2 to 3, and 3 to 1, you would enter 2,1,3. Press Calculate 
+	to calculate the cyclic representation of 
 	your permutation.</p>
-	<form action = "translation" method = "get">
+	<form name = "Translate"action = "" method = "post" target = "_self" onsubmit = "return >
 		<label>Permutation: <input type = "text" name = "cauchyPerm" maxlength = "100">
 		</label>
-		<button>Calculate</button>
+		<button name = "Calc" type = "submit">Calculate</button>
 	</form>
 </body>
 </html>
